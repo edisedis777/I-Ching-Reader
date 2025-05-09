@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>I-Ching Reader</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="container">
+      <header>
+        <h1>✨ I-Ching Reader ✨</h1>
+      </header>
+
+      <nav>
+        <button id="navCast">🔮 Cast Hexagram</button>
+        <button id="navHistory">📚 View History</button>
+        <button id="navAbout">ℹ️ About I-Ching</button>
+      </nav>
+
+      <main>
+        <section id="castSection" class="active-section">
+          <h2>🔮 Cast a New Hexagram</h2>
+          <div class="input-group">
+            <label for="question">Your Question (optional):</label>
+            <input
+              type="text"
+              id="question"
+              placeholder="Enter your question or focus" />
+          </div>
+          <button id="castButton">Toss Coins & Cast</button>
+
+          <div id="readingResult" class="reading-result" style="display: none">
+            <h3>📖 Reading:</h3>
+            <p id="currentQuestion"></p>
+
+            <div class="hexagram-display-area">
+              <div class="hexagram-column">
+                <h4>Primary Hexagram</h4>
+                <p id="primaryHexagramName"></p>
+                <div id="primaryHexagramVisual" class="hexagram-visual"></div>
+                <div id="primaryHexagramInfo" class="hexagram-info"></div>
+              </div>
+
+              <div
+                id="changingLinesInfo"
+                class="hexagram-column"
+                style="display: none">
+                <h4>✨ Changing Lines</h4>
+                <div id="changingLinesList"></div>
+              </div>
+
+              <div
+                id="resultingHexagramArea"
+                class="hexagram-column"
+                style="display: none">
+                <h4>📜 Resulting Hexagram</h4>
+                <p id="resultingHexagramName"></p>
+                <div id="resultingHexagramVisual" class="hexagram-visual"></div>
+                <div id="resultingHexagramInfo" class="hexagram-info"></div>
+              </div>
+            </div>
+
+            <div
+              id="nuclearHexagramArea"
+              class="hexagram-column"
+              style="display: none">
+              <h4>⚛️ Nuclear Hexagram (Core Influence)</h4>
+              <p id="nuclearHexagramName"></p>
+              <div id="nuclearHexagramVisual" class="hexagram-visual"></div>
+              <div id="nuclearHexagramInfo" class="hexagram-info"></div>
+            </div>
+          </div>
+        </section>
+
+        <section id="historySection" style="display: none">
+          <h2>📚 Reading History</h2>
+          <div id="historyList">
+            <p>No readings in history yet.</p>
+          </div>
+          <button id="resetHistoryButton" style="margin-top: 15px">
+            🗑️ Reset History
+          </button>
+        </section>
+
+        <section id="aboutSection" style="display: none">
+          <h2>ℹ️ About the I-Ching ☯️</h2>
+          <p>
+            The I-Ching, or Book of Changes, is an ancient Chinese text that has
+            guided people for over 3,000 years. More than just a divination
+            tool, it’s a profound phylosophical system for understanding life’s
+            patterns and transformations. At its core are 64 hexagrams: unique
+            combinations of six lines that can be either yin (broken) or yang
+            (unbroken).
+          </p>
+
+          <h3>🌌 The Yi-globe: A Cosmic Perspective</h3>
+          <p>
+            Imagine the I-Ching as a map of the universe’s rhythms, where every
+            hexagram connects to the others in a vast, intricate web. This
+            interconnectedness is beautifully captured in the
+            <strong>Yi-globe</strong>, a spherical arrangement of the 64
+            hexagrams that reflects the Chinese cosmological view of the
+            universe. Unlike the traditional linear sequence, the Yi-globe
+            reveals the hidden order and relationships among the hexagrams,
+            offering a three-dimensional perspective on the I-Ching’s wisdom.
+          </p>
+
+          <h3>🌍 Cosmological Foundations</h3>
+          <p>
+            In ancient Chinese cosmology, the universe is seen as a dynamic
+            interplay between Heaven (the Creative) and Earth (the Receptive).
+            The space between them is a force field where creation unfolds,
+            giving birth to the trigrams and hexagrams. The Yi-globe embodies
+            this vision, with the Creative at the top, the Receptive at the
+            bottom, and the hexagrams arranged in five levels between them,
+            symbolizing different stages of manifestation and transformation.
+          </p>
+
+          <h3>🌀 Structure of the Yi-globe</h3>
+          <p>
+            The Yi-globe is structured in five concentric levels, each
+            representing a different degree of yang energy:
+          </p>
+          <ul>
+            <li>
+              <strong>Level I (Closest to Earth):</strong> Hexagrams with one
+              yang line, symbolizing the initial spark of creation.
+            </li>
+            <li>
+              <strong>Level II:</strong> Hexagrams with two yang lines,
+              representing further development.
+            </li>
+            <li>
+              <strong>Level III (Equatorial Plane):</strong> Hexagrams with
+              three yang and three yin lines, embodying balance and harmony.
+            </li>
+            <li>
+              <strong>Level IV:</strong> Hexagrams with four yang lines,
+              indicating a shift towards greater yang energy.
+            </li>
+            <li>
+              <strong>Level V (Closest to Heaven):</strong> Hexagrams with five
+              yang lines, approaching the pure yang of the Creative.
+            </li>
+          </ul>
+          <p>
+            The central axis of the Yi-globe connects the Creative and the
+            Receptive, symbolizing the World Axis, while the equatorial plane
+            represents the realm of human existence, where balance between yin
+            and yang is crucial.
+          </p>
+
+          <h3>🔄 Symbolism of the Yi-globe</h3>
+          <p>The Yi-globe is rich in symbolism:</p>
+          <ul>
+            <li>
+              <strong>Space and Time:</strong> The hexagrams are arranged to
+              reflect the cardinal directions and the cycles of time, mirroring
+              the movement of celestial bodies.
+            </li>
+            <li>
+              <strong>Yin and Yang:</strong> The distribution of hexagrams
+              highlights the interplay of dark and light, with the Yi-globe’s
+              structure resembling the yin-yang symbol.
+            </li>
+            <li>
+              <strong>Cyclic Change:</strong> The paths between hexagrams
+              illustrate the continuous flow of change, emphasizing the
+              I-Ching’s core principle that everything is in a state of flux.
+            </li>
+          </ul>
+          <p>
+            This spherical arrangement also connects to other traditional
+            diagrams, such as the Earlier Heaven sequence, offering a deeper
+            understanding of the hexagrams’ relationships.
+          </p>
+
+          <h3>🧘 The Yi-globe and the Microcosm</h3>
+          <p>
+            Just as the Yi-globe symbolizes the macrocosm, it also reflects the
+            microcosm of the human body. In traditional Chinese medicine, the
+            body’s energy channels, or meridians, mirror the Yi-globe’s
+            structure. The twelve main meridians correspond to the twelve
+            meridians of the Yi-globe, and the flow of energy (qi) through these
+            channels parallels the movement of change in the I-Ching. This
+            connection underscores the I-Ching’s role not only in understanding
+            the universe but also in harmonizing the self with the cosmos.
+          </p>
+
+          <h3>📜 Enhancing Your I-Ching Practice</h3>
+          <p>
+            Understanding the Yi-globe can enrich your I-Ching readings by
+            providing a holistic view of the hexagrams’ interconnectedness. It
+            reveals how each hexagram relates to others spatially and
+            temporally, offering insights into the dynamics of change and the
+            underlying order of the cosmos. Whether you’re seeking guidance or
+            exploring the I-Ching’s philosophy, the Yi-globe invites you to see
+            the Book of Changes as a living, breathing system—a true reflection
+            of the universe’s harmony and balance.
+          </p>
+
+          <h3>🪙 The Coin Method</h3>
+          <p>
+            The method used in this simulator is the three-coin method where:
+          </p>
+          <ul>
+            <li>6 (e.g., 3 tails): Old Yin (—x— changing to Yang ———)</li>
+            <li>7 (e.g., 2 tails, 1 head): Young Yang (——— stable)</li>
+            <li>8 (e.g., 1 tail, 2 heads): Young Yin (— — stable)</li>
+            <li>9 (e.g., 3 heads): Old Yang (—o— changing to Yin — —)</li>
+          </ul>
+
+          <h3>📖 Understanding Your Reading</h3>
+          <p>An I-Ching reading typically involves several key components:</p>
+
+          <h4>🔮 Primary Hexagram</h4>
+          <p>
+            This is the first hexagram you cast. It represents the current state
+            of affairs concerning your question, or the fundamental situation
+            you’re currently in. Think of it as the main "snapshot" or the
+            foundational energy pattern related to your inquiry. It describes
+            the present moment and the forces immediately at play. Its judgment
+            and image offer direct counsel and a symbolic representation of this
+            initial state.
+          </p>
+
+          <h4>✨ Changing Lines</h4>
+          <p>
+            If any of the six lines you cast are "old" (a 6, which is old yin,
+            or a 9, which is old yang), they are considered changing lines.
+            These lines are highly significant as they represent dynamic energy
+            within the situation – aspects that are in a state of transformation
+            or are particularly charged. Each changing line has its own specific
+            meaning and advice, often highlighting a crucial point of focus, a
+            challenge, an opportunity, or a necessary action. These lines are
+            the bridge that leads from the primary hexagram to the resulting
+            hexagram, indicating where the energy is shifting. The number and
+            position of changing lines can greatly influence the interpretation.
+          </p>
+
+          <h4>📜 Resulting Hexagram</h4>
+          <p>
+            When you have changing lines, the primary hexagram transforms into a
+            second hexagram, known as the resulting (or future) hexagram. This
+            transformation occurs because each changing line "flips" to its
+            opposite (old yin becomes young yang, old yang becomes young yin).
+            The resulting hexagram suggests the potential outcome, the direction
+            the situation is heading, or the state that will likely emerge as
+            the energies indicated by the changing lines play out. It can
+            represent the future, a developed state of the current situation, or
+            the consequence of heeding (or ignoring) the advice of the changing
+            lines. If there are no changing lines, the primary hexagram is the
+            sole focus, indicating a more stable or defined situation.
+          </p>
+
+          <h4>⚛️ Nuclear Hexagram (Core Influence)</h4>
+          <p>
+            The nuclear hexagram is an important part of an I-Ching reading.
+            It’s like a hidden core or the underlying influence of the situation
+            described by the primary hexagram.
+          </p>
+          <p>Significance:</p>
+          <ul>
+            <li>
+              <strong>1. Inner Nature/Latent Potential:</strong> While the
+              primary hexagram describes the main situation you’re asking about,
+              the nuclear hexagram reveals the intrinsic nature, the "seed," or
+              the latent potential within that situation. It’s like looking at
+              the DNA of the primary hexagram.
+            </li>
+            <li>
+              <strong>2. Hidden Dynamics:</strong> It can point to subconscious
+              factors, hidden dynamics, or the fundamental character of the
+              issue that might not be immediately obvious from the primary
+              hexagram alone.
+            </li>
+            <li>
+              <strong>3. Developmental Insight:</strong> Sometimes, the nuclear
+              hexagram can suggest how the situation might develop from within,
+              or what its most essential, unchanging quality is, regardless of
+              how the outer lines (and thus the primary hexagram) might appear
+              to be changing.
+            </li>
+            <li>
+              <strong>4. Deeper Understanding:</strong> It’s formed from the
+              inner four lines of the primary hexagram (lines 2, 3, 4, and 5).
+              Specifically: Lines 2, 3, and 4 of the primary hexagram form the
+              lower trigram of the nuclear hexagram. Lines 3, 4, and 5 of the
+              primary hexagram form the upper trigram of the nuclear hexagram.
+              This construction itself suggests it’s about the "heart" of the
+              matter.
+            </li>
+          </ul>
+          <p>
+            So, when you get a reading, looking at the nuclear hexagram
+            alongside the primary (and resulting, if there are changing lines)
+            can give you a richer, more nuanced understanding of the forces at
+            play. It’s like an extra layer of insight into the core of the
+            question you’ve asked!
+          </p>
+        </section>
+      </main>
+    </div>
+    <script src="complete_hexagram_data.js"></script>
+    <script src="script.js"></script>
+  </body>
+</html>
