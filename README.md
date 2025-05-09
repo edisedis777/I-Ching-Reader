@@ -17,6 +17,10 @@ A web-based I-Ching (Book of Changes) simulator that allows users to cast hexagr
 - <img width="459" alt="Screenshot_about" src="https://github.com/user-attachments/assets/cc03dda5-8ba8-498f-a5ce-25357d3fd30c" />
 
 
+## 🚀 Live Demo
+
+[Live Demo](https://edisedis777.github.io/I-Ching-Reader/) 
+
 ## 🌟 Features
 
 - **Hexagram Casting:** Simulate casting hexagrams using the three-coin method.
