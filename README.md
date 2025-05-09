@@ -72,6 +72,11 @@ I_Ching_reader/
     - Your can reset the history by clicking on the **🗑️ Reset History** button. 
 4.  **Learn More:**
     - Visit the "ℹ️ About I-Ching" section for detailed background information on the I-Ching, its components, and the Yi-globe.
+  
+
+## 🌐 Companion Project: I-Ching Sphere
+
+For a 3D visual exploration of the Yi-globe and its hexagram arrangements, check out the [I-Ching Sphere](https://github.com/edisedis777/I-Ching-Sphere) project.
 
 ## 🌱 Future Enhancements (Ideas)
 
