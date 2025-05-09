@@ -5,7 +5,8 @@ A web-based I-Ching (Book of Changes) simulator that allows users to cast hexagr
 # 📸 Screenshots!
 
 - Main casting interface:
-- <img width="459" alt="Screenshot_casting" src="https://github.com/user-attachments/assets/10f81551-62d5-4e03-8efc-5ef7635d9017" />
+- <img width="465" alt="Screenshot_main" src="https://github.com/user-attachments/assets/3c89d608-9ff9-4fcc-a910-5bfeca349c30" />
+
 
 - Example of a reading result:
 - <img width="440" alt="Screenshot_reading" src="https://github.com/user-attachments/assets/0a056c71-fef9-4c38-8aea-ba59d2790d61" />
