@@ -2,12 +2,20 @@
 
 A web-based I-Ching (Book of Changes) simulator that allows users to cast hexagrams, receive interpretations, and learn about this ancient phylosophical divination system.
 
-# 📸 Screenshots (Placeholder)
+# 📸 Screenshots!
 
-- _Main casting interface_
-- _Example of a reading result_
-- _History page_
-- _About page_
+- Main casting interface:
+- <img width="459" alt="Screenshot_casting" src="https://github.com/user-attachments/assets/10f81551-62d5-4e03-8efc-5ef7635d9017" />
+
+- Example of a reading result:
+- <img width="440" alt="Screenshot_reading" src="https://github.com/user-attachments/assets/0a056c71-fef9-4c38-8aea-ba59d2790d61" />
+
+- History page:
+- <img width="460" alt="Screenshot_history" src="https://github.com/user-attachments/assets/9e29ea5e-772c-4ece-9f69-cbf27e663570" />
+
+- About page:
+- <img width="459" alt="Screenshot_about" src="https://github.com/user-attachments/assets/cc03dda5-8ba8-498f-a5ce-25357d3fd30c" />
+
 
 ## 🌟 Features
 
