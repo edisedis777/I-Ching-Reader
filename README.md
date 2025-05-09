@@ -98,6 +98,10 @@ For a 3D visual exploration of the Yi-globe and its hexagram arrangements, check
 
 Contributions, issues, and feature requests are welcome!
 
+## 🙏 Credits
+- This project was inspired by the work of Drasny József on the I Ching Globe. You can read more about it here: [I Ching Globe PDF](https://www.pascal-man.com/navigation/faq-java-browser/PDF-I-Ching/yiglobe.pdf)
+- [I Ching on Wikibooks](https://en.wikibooks.org/wiki/I_Ching/The_64_Hexagrams) for the hexagram data
+
 ## 📜 License
 
 This project is licensed under the GNU Affero General Public License v3.0 License. See the `LICENSE` file for details.
