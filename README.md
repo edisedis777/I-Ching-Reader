@@ -69,7 +69,7 @@ I_Ching_reader/
 3.  **View History:**
     - Go to the "📚 View History" section to see a list of your past readings.
     - The most recent 10 Readings will be saved to the history. This can be configured in the script.js file code. 
-    - Your can reset the history by clicking on the ** 🗑️ Reset History ** button. 
+    - Your can reset the history by clicking on the **🗑️ Reset History** button. 
 4.  **Learn More:**
     - Visit the "ℹ️ About I-Ching" section for detailed background information on the I-Ching, its components, and the Yi-globe.
 
