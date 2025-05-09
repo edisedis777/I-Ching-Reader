@@ -45,7 +45,7 @@ I_Ching_reader/
 ├── index.html                      # Main HTML file for the application
 ├── styles.css                      # CSS styles for layout and appearance
 ├── script.js                       # Core JavaScript logic for the application
-└── complete_hexagram_data.js # Contains the data for all 64 hexagrams
+└── complete_hexagram_data.js       # Contains the data for all 64 hexagrams
 ```
 
 ## 🚀 Setup and Installation
